@@ -48,6 +48,13 @@ npm start
 This will start a development server that will connect to the 
 backend and 
 
+### Design documents
+In the `./design-documents` folder are week-3 and week-6 milestone
+reports. They contain initial UI wireframes and preliminary
+data on normalizing the open information extraction process.
+They also contain survey question from the SQUAD dataset
+that was used to study the effects of IE-Reader on comprehension.
+
 ### User Study 
 
 Pictures used in the user surveys are contained in the `./pics` directory
