@@ -48,5 +48,9 @@ npm start
 This will start a development server that will connect to the 
 backend and 
 
+### User Study 
 
-
+Pictures used in the user surveys are contained in the `./pics` directory
+as well as a screenshot of the webapp. Statistical analysis of the 
+user study data was performed with an Jupyter notebook in the `./analysis` 
+directory. This directory also contains an image of box plots of user study responses. 
