@@ -158,6 +158,13 @@ const immuneText2 = "Inflammation is one of the first responses of the immune sy
 
 const pharmacyText1 = "Pharmacists are healthcare professionals with specialised education and training who perform various roles to ensure optimal health outcomes for their patients through the quality use of medicines. Pharmacists may also be small-business proprietors, owning the pharmacy in which they practice. Since pharmacists know about the mode of action of a particular drug, and its metabolism and physiological effects on the human body in great detail, they play an important role in optimisation of a drug treatment for an individual."
 
+const nytText1 = "The threat by the chairman, Representative Jerrold Nadler, Democrat of New York, came on the eve of Democrats’ return to Washington after a two-week congressional recess that has been dominated by questions about the special counsel’s report. Mr. Barr is scheduled to come before Mr. Nadler’s committee on Thursday to testify about it.\n" +
+  "\n" +
+  "But Mr. Barr and Democrats are at loggerheads over the Democrats’ proposed format for questioning him, and now the much-anticipated hearing is in doubt. The dispute spilled out into the open on Sunday when Democrats revealed that Mr. Barr was threatening to skip the session if they did not change their terms. Mr. Nadler said they have no intention of doing so.\n" +
+  "\n" +
+  "“The witness is not going to tell the committee how to conduct its hearing, period,” he told CNN on Sunday morning. If Mr. Barr does not show up, Mr. Nadler added, “then we will have to subpoena him, and we will have to use whatever means we can to enforce the subpoena.”\n" +
+  "\n"
+
 const demoTexts = [
   {
     "label": "SQUAD Immune 1",
@@ -170,6 +177,10 @@ const demoTexts = [
   {
     "label": "SQUAD Pharmacy",
     "value": pharmacyText1
+  },
+  {
+    "label": "New York Times",
+    "value": nytText1
   }
 ]
 
