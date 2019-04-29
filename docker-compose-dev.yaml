@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  back-end:
+    build: ./back-end
+    image: ie-reader-backend
+    volumes:
+      - ./back-end/src:/app/src
+    ports:
+      - "5000:5000"
+    networks:
+      - app
+    command: [ "gunicorn", "--reload", "--bind", "0.0.0.0:5000", "--workers=1", "--worker-class", "gevent", "--timeout", "1600", "--pythonpath", "./src", "ie_reader.app:app" ]
+networks:
+  app:
+
+

@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  back-end:
+    build: ./back-end
+    image: ie-reader-backend
+    ports:
+      - "5000:5000"
+    networks:
+      - app
+
+  front-end:
+    build: ./front-end
+    image: ie-reader-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - back-end
+    links:
+      - back-end
+    networks:
+      - app
+    environment:
+      - REACT_APP_BACKEND_URL=http://back-end:5000
+
+networks:
+  app:
