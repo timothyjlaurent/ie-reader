@@ -52,7 +52,7 @@ def predict_req():
             LEVENSHTEIN_DISTANCE_PARAM: payload.get('levenshtein', 0.2)
         }
 
-        _, _, nodes, edges = open_ie_with_coreference(text.replace('\n', " "), options=options)
+        _, _, nodes, edges = open_ie_with_coreference(text.replace('\n', ""), options=options)
         return json.dumps(dict(nodes=nodes, edges=edges))
     # Add additional model pipelines here
     abort(404)
@@ -328,9 +328,9 @@ def open_ie_with_coreference(text, options):
         print(f'sentence {sentence_i} offset {index_offset}')
         # ensure the offset is working
 
-        for i in range(3):
-            print('coref', coref_prediction['document'][index_offset + i])
-            print('sentence', sentence_prediction['words'][0 + i])
+        # for i in range(3):
+        #     print('coref', coref_prediction['document'][index_offset + i])
+        #     print('sentence', sentence_prediction['words'][0 + i])
 
         assert coref_prediction['document'][index_offset] == sentence_prediction['words'][0]
         for verb_i, verb in enumerate(sentence_prediction['verbs']):

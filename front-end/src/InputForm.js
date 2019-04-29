@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useReducer } from "react";
 
-import { Input, Row, Slider, Col } from "antd";
+import { Input, Row, Slider, Col, Icon, Tooltip } from "antd";
 
 import Select from "react-select";
 
@@ -71,7 +71,7 @@ const InputForm = ({updateGraph}) => {
           {
             text: "",
             model:models[0].value,
-            levenshtein: 0.2,
+            levenshtein: 0.0,
           }
         }
         onSubmit={async (values, { setSubmitting }) => {
@@ -125,12 +125,22 @@ const InputForm = ({updateGraph}) => {
                 <label
                   htmlFor={'levenshtein'}
                 >
-                  Levenshtein percentage
+                  Levenshtein distance{' '}
+                  <Tooltip
+                    placement={"right"}
+                    title={"Use Levenshtein distance to merge nodes"}
+                  >
+                    <Icon
+                      type="info-circle"
+                      style={{
+                        fontSize: "12px"
+                      }}
+                    />
+                  </Tooltip>
                 </label>
                 <Field
                   name={'levenshtein'}
                   component={SliderField}
-                  defaultValue={0.8}
                   min={0}
                   max={0.5}
                   step={0.01}
@@ -165,6 +175,12 @@ const nytText1 = "The threat by the chairman, Representative Jerrold Nadler, Dem
   "“The witness is not going to tell the committee how to conduct its hearing, period,” he told CNN on Sunday morning. If Mr. Barr does not show up, Mr. Nadler added, “then we will have to subpoena him, and we will have to use whatever means we can to enforce the subpoena.”\n" +
   "\n"
 
+const chineseText = "The Chinese superblock also suffers from another problem associated with American suburbs — segregation. American suburbs, which flourished during the era of “white flight” in the mid century, are a famously racist form of planning which in both indirect (income sorting) and direct (neighborhood covenants) ways allowed whites to live exclusively among other whites of similar socioeconomic status.\n" +
+  "\n" +
+  "Chinese superblocks obviously don’t have the race problem, but as they’re comprised of many identical residential towers they do necessarily sort people according to what level of housing they are able to afford. It’s hard not to believe that gated superblock developments, which nauseatingly often include daycare centers, cram schools and other amenities for residents’ children within the superblock gates, have benefited from the obliteration of social trust in China’s Reform era.\n" +
+  "\n" +
+  "Some people who study this last issue have argued that gated superblocks are actually a logical evolution of the Chinese urban form, consistent with earlier traditions like courtyard housing, lilong (lanehouses) and danwei (work units). I will address this in my next column on gating, enclosure and the Chinese urban form. After that, I’ll finish up this trio of articles with a column on China’s “new urbanism.” Although superblock development is still rampant, China’s highest planning authorities are finally admitting that they’ve made a mistake, and some efforts are now being made to rectify the superblock and redress earlier urban planning sins. But are these reforms too little, too late for the Chinese city?\n"
+
 const demoTexts = [
   {
     "label": "SQUAD Immune 1",
@@ -181,6 +197,10 @@ const demoTexts = [
   {
     "label": "New York Times",
     "value": nytText1
+  },
+  {
+    "label": "Radii China",
+    "value": chineseText
   }
 ]
 

@@ -13,7 +13,7 @@ const GraphRenderer = ({graph}) => {
         edgeMinimization: true,
         treeSpacing: 100,
         levelSeparation: 320,
-        nodeSpacing: 50,
+        nodeSpacing: 20,
         blockShifting: true,
         parentCentralization: true,
         hubsize: "directed",
@@ -34,7 +34,7 @@ const GraphRenderer = ({graph}) => {
         roundness: 0.45
       },
       shadow: true,
-      length: 5,
+      length: 30,
       scaling: {
         label: true
       }
