@@ -3,7 +3,8 @@
 ## Installation
 ### Requirements
 
-Running IE-Reader requires Docker and docker-compose.
+Running IE-Reader requires Docker and docker-compose for deployment 
+and NodeJS for development.
 
 [Docker-CE instalation documentation](https://docs.docker.com/install/)
 
@@ -42,6 +43,7 @@ This will start a back-end only container listening on port 5000.
 Then enter the front-end directory, `cd front-end`, and run:
 
 ```bash
+npm install
 npm start
 ```
 
