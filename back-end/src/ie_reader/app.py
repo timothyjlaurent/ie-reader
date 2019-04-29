@@ -217,7 +217,7 @@ def collect_normalized_verbs(triples, entities, document):
             if arg in triple:
                 arg_span = triple[arg]
                 arg_i, _ = get_entity_for_span(entities, arg_span)
-                if arg_i:
+                if arg_i is not None:
                     arg_str = get_str_from_span(document, arg_span)
                     verb[arg] = dict(
                         span=arg_span,
